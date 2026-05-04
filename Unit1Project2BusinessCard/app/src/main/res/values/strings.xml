@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Unit 1 - Project 2 - Business Card</string>
+    <string name="android">android</string>
+    <string name="name">Havir Valizade</string>
+    <string name="job_title">Software Engineer - Mobile</string>
+    <string name="phone_number">+11 (123) 444 555 666</string>
+    <string name="social_media_id">\@Android-dev</string>
+    <string name="email">email@mail.com</string>
 </resources>
