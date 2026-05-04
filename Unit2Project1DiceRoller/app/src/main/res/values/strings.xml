@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Unit 2 - Project 1 - Dice Roller</string>
+    <string name="roll">Roll</string>
 </resources>
