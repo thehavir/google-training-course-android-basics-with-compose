@@ -1,0 +1,22 @@
+# Android / Gradle build outputs
+**/build/
+**/captures/
+
+# Gradle wrapper and caches
+.gradle/
+**/.gradle/
+
+# Android Studio / IntelliJ IDEA
+*.iml
+**/.idea/
+
+# Local config (must not be committed)
+local.properties
+**/local.properties
+
+# Native build artifacts
+**/.externalNativeBuild/
+**/.cxx/
+
+# macOS
+.DS_Store
