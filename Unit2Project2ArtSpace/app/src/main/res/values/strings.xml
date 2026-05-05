@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Unit 2 - Project 2 - Art Space</string>
+    <string name="vase_of_flowers_title">Vase of Flowers</string>
+    <string name="vase_of_flowers_subtitle">Jan Davidsz de Heem (1670)</string>
+    <string name="jeremiah_title">Jeremiah Lamenting the Destruction of Jerusalem</string>
+    <string name="jeremiah_subtitle">Rembrandt (1630)</string>
+    <string name="driving_home_title">Driving Home The Flock</string>
+    <string name="driving_home_subtitle">Robert Hills (1812)</string>
+    <string name="artichoke_flowers_title">Jerusalem Artichoke Flowers</string>
+    <string name="artichoke_flowers_subtitle">Claude Monet (1880)</string>
+    <string name="pears_title">Pears</string>
+    <string name="pears_subtitle">Edouard Manet (1880)</string>
+    <string name="woman_with_a_parasol_title">Woman with a Parasol</string>
+    <string name="woman_with_a_parasol_subtitle">Claude Monet (1875)</string>
+    <string name="courting_title">Courting</string>
+    <string name="courting_subtitle">Andor Dudits (1893)</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
 </resources>
