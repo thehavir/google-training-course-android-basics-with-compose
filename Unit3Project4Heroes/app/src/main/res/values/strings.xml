@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Unit 3 - Project 4 - Heroes</string>
+    <string name="app_title_super_part">Super</string>
+    <string name="app_title_hero_part">heroes</string>
+    <string name="hero_name1">Samwise Gamgee</string>
+    <string name="hero_description1">Loyal gardener who prioritizes friendship and duty, carrying Frodo and hope when all seems lost.</string>
+    <string name="hero_name2">Baruch Spinoza</string>
+    <string name="hero_description2">Philosopher who lived according to rational integrity and ethical principles despite exile and controversy.</string>
+    <string name="hero_name3">Oskar Schindler</string>
+    <string name="hero_description3">Used his position and resources to save hundreds of Jews, risking his safety for others.</string>
+    <string name="hero_name4">Henry Ford</string>
+    <string name="hero_description4">Mass‑produced affordable cars and transformed manufacturing with assembly‑line efficiency.</string>
+    <string name="hero_name5">Tim Berners‑Lee</string>
+    <string name="hero_description5">Invented the World Wide Web and advocated for an open, accessible internet.</string>
+    <string name="hero_name6">Wright Brothers</string>
+    <string name="hero_description6">Through persistent experimentation and integrity, achieved human flight and shared knowledge openly.</string>
+    <string name="hero_name7">Marie Curie</string>
+    <string name="hero_description7">Dedicated her life to scientific discovery, working under harsh conditions for knowledge that benefits humanity.</string>
+    <string name="hero_name8">Nikola Tesla</string>
+    <string name="hero_description8">Visionary inventor and engineer who pursued radical ideas in electricity and wireless transmission despite personal hardship.</string>
 </resources>
