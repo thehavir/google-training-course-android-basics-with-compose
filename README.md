@@ -37,7 +37,7 @@ My solutions for the "Android Basics with Compose" projects and challenges.
 ## Lemenade
 </br>
 
-<img width="240" alt="Screenshot 2026-05-05 at 19 55 09" src="https://github.com/user-attachments/assets/3d459234-75e5-44c1-8b95-e2e927834828" />
+<img width="240" alt="Screenshot 2026-05-05 at 19 55 09" src="https://github.com/user-attachments/assets/96276237-d325-4233-9865-f8cbf96d7e60" />
 
 </br>
 
