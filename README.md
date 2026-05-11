@@ -7,7 +7,7 @@ My solutions for the "Android Basics with Compose" projects and challenges.
 ## Birthday Card
 </br>
 
-<img width="240" alt="Screenshot 2026-05-04 at 08 09 40" src="https://github.com/user-attachments/assets/6c891373-2c48-4ea1-a46c-4ff7c3a65007" />
+<img width="240" alt="Screenshot 2026-05-04 at 08 09 40" src="https://github.com/user-attachments/assets/1e3c754d-55df-4e84-bfdc-2d9c922c2233" />
 
 </br>
 
