@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Unit 2 - Project 3 - Lemenade</string>
+    <string name="app_title">Lemenade</string>
     <string name="select_lemon">Tap the lemon tree to select a lemon.</string>
     <string name="squeeze_lemon">Tap %1$d times the lemon to squeeze it.</string>
     <string name="drink_lemon">Tap the lemonade to drink it.</string>

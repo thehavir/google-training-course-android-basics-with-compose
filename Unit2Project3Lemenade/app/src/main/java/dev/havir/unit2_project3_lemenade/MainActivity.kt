@@ -61,7 +61,7 @@ fun LemonadeApp() {
         CenterAlignedTopAppBar(
             title = {
                 Text(
-                    stringResource(R.string.app_name),
+                    stringResource(R.string.app_title),
                     fontWeight = FontWeight.Bold
                 )
             }, colors = TopAppBarDefaults.topAppBarColors(
