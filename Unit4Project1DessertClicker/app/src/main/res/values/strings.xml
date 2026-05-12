@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Unit 4 - Project 1 - Dessert Clicker</string>
+    <string name="app_title">Dessert Clicker</string>
+    <string name="dessert_sold">Desserts sold</string>
+    <string name="total_revenue">Total Revenue</string>
+    <string name="share">Share</string>
+    <string name="share_text">I\'ve clicked %1$d Desserts for a total of $%2$.2f #AndroidDessertClicker</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
+    <string name="dessert_cupcake">Cupcake</string>
+    <string name="dessert_donut">Donut</string>
+    <string name="dessert_eclair">Eclair</string>
+    <string name="dessert_froyo">Froyo</string>
+    <string name="dessert_gingerbread">Gingerbread</string>
+    <string name="dessert_honeycomb">Honeycomb</string>
+    <string name="dessert_icecreamsandwich">Ice cream sandwich</string>
+    <string name="dessert_jellybean">Jelly bean</string>
+    <string name="dessert_kitkat">Kitkat</string>
+    <string name="dessert_lollipop">Lollipop</string>
+    <string name="dessert_marshmallow">Marshmallow</string>
+    <string name="dessert_nougat">Nougat</string>
+    <string name="dessert_oreo">Oreo</string>
 </resources>

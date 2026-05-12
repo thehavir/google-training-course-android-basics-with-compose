@@ -1,47 +1,60 @@
 package dev.havir.unit4_project1_dessertclicker
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import dev.havir.unit4_project1_dessertclicker.ui.dessertclicker.DessertClickerScreen
 import dev.havir.unit4_project1_dessertclicker.ui.theme.Unit4Project1DessertClickerTheme
+
+private const val TAG = "MainActivity"
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreated called")
         enableEdgeToEdge()
         setContent {
             Unit4Project1DessertClickerTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                DessertClickerScreen()
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    override fun onStart() {
+        super.onStart()
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Unit4Project1DessertClickerTheme {
-        Greeting("Android")
+        Log.d(TAG, "onStart called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+
+        Log.d(TAG, "onRestart called")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.d(TAG, "onResume called")
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.d(TAG, "onPause called")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.d(TAG, "onStop called")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.d(TAG, "onDestroy called")
     }
 }
