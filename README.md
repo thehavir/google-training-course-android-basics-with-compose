@@ -81,7 +81,14 @@ My solutions for the "Android Basics with Compose" projects and challenges.
 ## Thirty Days
 </br>
 
-<img width="240" alt="design" src="https://github.com/user-attachments/assets/2bd16f76-e664-4542-95b9-e58bc2d9f106"> |
+<img width="240" alt="design" src="https://github.com/user-attachments/assets/2bd16f76-e664-4542-95b9-e58bc2d9f106">
+
+</br>
+
+## Dessert Clicker
+</br>
+
+<img width="240" alt="design" src="https://github.com/user-attachments/assets/25e42510-40fd-45c6-87f2-8d54068cd5bf">
 
 </br>
 
