@@ -92,3 +92,11 @@ My solutions for the "Android Basics with Compose" projects and challenges.
 
 </br>
 
+## Unscramble Game
+</br>
+
+| Normal | Error | Game Over |
+| --- | --- | --- |
+| <img width="240" alt="design" src="https://github.com/user-attachments/assets/4622b307-2742-494c-b686-263042fca115"> | <img width="240" alt="app" src="https://github.com/user-attachments/assets/2d15cf70-cdfa-4f51-adf5-9ba1ad746639"> | <img width="240" alt="app" src="https://github.com/user-attachments/assets/b1062056-0138-4cfd-8ba9-21e25a0755a2"> |
+
+</br>
