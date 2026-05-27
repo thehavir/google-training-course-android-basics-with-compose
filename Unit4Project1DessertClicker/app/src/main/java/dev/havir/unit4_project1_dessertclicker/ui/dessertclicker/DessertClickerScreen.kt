@@ -28,11 +28,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableDoubleStateOf
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -42,28 +39,26 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import dev.havir.unit4_project1_dessertclicker.R
 import dev.havir.unit4_project1_dessertclicker.data.Dessert
 import dev.havir.unit4_project1_dessertclicker.data.DessertDatasource
 import dev.havir.unit4_project1_dessertclicker.ui.theme.Unit4Project1DessertClickerTheme
 
 @Composable
-fun DessertClickerScreen() {
-    val desserts = DessertDatasource.desserts
-
-    var soldDesserts by rememberSaveable { mutableIntStateOf(0) }
-    var revenue by rememberSaveable { mutableDoubleStateOf(0.0) }
-
-    val currentDessert = dessertToShow(desserts, soldDesserts)
-
+fun DessertClickerScreen(
+    factory: DessertClickerViewModelFactory,
+    dessertClickerViewModel: DessertClickerViewModel = viewModel(factory = factory)
+) {
+    val dessertClickerUiState by dessertClickerViewModel.uiState.collectAsState()
     Scaffold(
         topBar = {
             val intentContext = LocalContext.current
             AppBar(onClick = {
                 shareDessertInfo(
                     context = intentContext,
-                    soldDesserts = soldDesserts,
-                    revenue = revenue
+                    soldDesserts = dessertClickerUiState.soldDesserts,
+                    revenue = dessertClickerUiState.revenue
                 )
             })
         },
@@ -72,16 +67,13 @@ fun DessertClickerScreen() {
         // In order to extend content background under the navigation bar
         Column(Modifier.padding(top = innerPadding.calculateTopPadding())) {
             DessertArea(
-                dessert = currentDessert,
-                onDessertClick = {
-                    soldDesserts++
-                    revenue += currentDessert.price
-                },
+                dessert = dessertClickerUiState.dessert,
+                onDessertClick = dessertClickerViewModel::sellDessert,
                 modifier = Modifier.weight(1f),
             )
             Footer(
-                soldDesserts = soldDesserts,
-                revenue = revenue,
+                soldDesserts = dessertClickerUiState.soldDesserts,
+                revenue = dessertClickerUiState.revenue,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(160.dp)
@@ -114,9 +106,7 @@ fun AppBar(onClick: () -> Unit, modifier: Modifier = Modifier) {
 
 @Composable
 fun DessertArea(
-    dessert: Dessert,
-    onDessertClick: () -> Unit,
-    modifier: Modifier = Modifier
+    dessert: Dessert, onDessertClick: () -> Unit, modifier: Modifier = Modifier
 ) {
     Box(
         contentAlignment = Alignment.Center,
@@ -181,17 +171,6 @@ fun Footer(
     }
 }
 
-// Finds and returns the dessert that has highest startProductionAmount that is
-// lower than soldDesserts.
-// If we have following:
-//      Dessert A - startProductionAmount = 0,
-//      Dessert B - startProductionAmount = 5,
-//      Dessert C - startProductionAmount = 20
-// And the soldDesserts is 18, then it returns Dessert B.
-fun dessertToShow(desserts: List<Dessert>, soldDesserts: Int) =
-    desserts.findLast { it.startProductionAmount <= soldDesserts }
-        ?: desserts.first()
-
 private fun shareDessertInfo(
     context: Context,
     soldDesserts: Int,
@@ -219,7 +198,8 @@ private fun shareDessertInfo(
 @Preview(showBackground = true)
 @Composable
 fun DessertClickerScreenPreview() {
+    val factory = DessertClickerViewModelFactory(DessertDatasource())
     Unit4Project1DessertClickerTheme {
-        DessertClickerScreen()
+        DessertClickerScreen(factory = factory)
     }
 }

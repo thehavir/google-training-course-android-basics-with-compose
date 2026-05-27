@@ -8,12 +8,12 @@ import org.junit.Test
 class DessertDataSourceTest {
     @Test
     fun dessertsHasAllDesserts() {
-        assertEquals(13, DessertDatasource.desserts.size)
+        assertEquals(13, DessertDatasource().desserts.size)
     }
 
     @Test
     fun dessertsHasNonZeroDrawableResIdForImageIdForAllDesserts() {
-        val desserts = DessertDatasource.desserts
+        val desserts = DessertDatasource().desserts
         desserts.forEach { dessert ->
             assertNotEquals(0, dessert.imageDrawableResId)
         }
@@ -21,7 +21,7 @@ class DessertDataSourceTest {
 
     @Test
     fun dessertsHasNonZeroStringResIdForTitleIdForAllDesserts() {
-        val desserts = DessertDatasource.desserts
+        val desserts = DessertDatasource().desserts
         desserts.forEach { dessert ->
             assertNotEquals(0, dessert.titleStringResId)
         }
@@ -29,7 +29,7 @@ class DessertDataSourceTest {
 
     @Test
     fun dessertsHasUniqueImageDrawableResIdForAllDesserts() {
-        val desserts = DessertDatasource.desserts
+        val desserts = DessertDatasource().desserts
         val ids = desserts.map { it.imageDrawableResId }
 
         assertEquals(ids.distinct(), ids)
@@ -37,7 +37,7 @@ class DessertDataSourceTest {
 
     @Test
     fun dessertsHasUniqueTitleStringResIdForAllDesserts() {
-        val desserts = DessertDatasource.desserts
+        val desserts = DessertDatasource().desserts
         val ids = desserts.map { it.titleStringResId }
 
         assertEquals(ids.distinct(), ids)

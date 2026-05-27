@@ -2,7 +2,7 @@ package dev.havir.unit4_project1_dessertclicker.data
 
 import dev.havir.unit4_project1_dessertclicker.R
 
-object DessertDatasource {
+class DessertDatasource {
     val desserts = listOf(
         Dessert(
             imageDrawableResId = R.drawable.cupcake,

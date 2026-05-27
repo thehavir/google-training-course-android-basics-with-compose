@@ -63,5 +63,3 @@ class MainActivityTest {
         composeTestRule.onNodeWithContentDescription("Donut").isDisplayed()
     }
 }
-
-
